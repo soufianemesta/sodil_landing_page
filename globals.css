@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SoDil Brand Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+/* SoDil Brand Colors */
+:root {
+  --sodil-yellow: #FFC300;
+  --sodil-red: #C81010;
+  --white: #FFFFFF;
+  --dark-gray: #333333;
+  --light-gray: #666666;
+}
+
+/* Typography according to brand guidelines */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--sodil-red);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--sodil-red);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p, body {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--dark-gray);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SoDil Button Styles */
+.btn-primary {
+  background-color: var(--sodil-yellow);
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #E6AF00; /* 15% darker */
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--sodil-red);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #AA0E0E; /* 15% darker */
+  transform: translateY(-2px);
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* Custom animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
